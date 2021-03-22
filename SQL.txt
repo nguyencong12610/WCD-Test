@@ -1,0 +1,57 @@
+CREATE TABLE tbproducts (
+  id int(11) NOT NULL,
+  name varchar(255) NOT NULL,
+  price decimal(18,0) NOT NULL,
+  amount int(11) NOT NULL,
+  details varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng users
+--
+
+CREATE TABLE users (
+  id int(3) NOT NULL,
+  name varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  email varchar(220) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  country varchar(120) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng tbproducts
+--
+ALTER TABLE tbproducts
+  ADD PRIMARY KEY (id);
+
+--
+-- Chỉ mục cho bảng users
+--
+ALTER TABLE users
+  ADD PRIMARY KEY (id);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng tbproducts
+--
+ALTER TABLE tbproducts
+  MODIFY id int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng users
+--
+ALTER TABLE users
+  MODIFY id int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
